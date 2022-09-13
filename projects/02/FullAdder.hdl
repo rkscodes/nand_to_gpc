@@ -13,5 +13,25 @@ CHIP FullAdder {
         carry;   // Left bit of a + b + c
 
     PARTS:
-    // Put you code here:
+    // I don't want to use HalfAdders will make more complex circuit
+
+    // So let's direclty use our logic to compute
+    Xor(a=a, b=b, out=axb);
+    Xor(a=axb, b=c, out=sum);
+
+    //carry hardware
+    // And(a=, b=, out=);
+    And(a=a, b=b, out=aAb);
+    And(a=b, b=c, out=bAc);
+    And(a=a, b=c, out=aAc);
+    Or(a=aAb, b=bAc, out=o1);
+    Or(a=o1, b=aAc, out=carry);
+
+
 }
+
+// input  sum  carry
+// 0 0 0    0   0
+// 0 0 1    1   0
+// 0 1 1    0   1
+// 1 1 1    1   1
