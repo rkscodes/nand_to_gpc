@@ -13,7 +13,7 @@ CHIP Inc16 {
     OUT out[16];
 
     PARTS:
-   // Put you code here:
+//    Put you code here:
 //    HalfAdder(a=in[0], b=true, sum=out[0], carry=c0);
 //    HalfAdder(a=in[1], b=c0, sum=out[1], carry=c1);
 //    HalfAdder(a=in[2], b=c1, sum=out[2], carry=c2);
@@ -30,9 +30,9 @@ CHIP Inc16 {
 //    HalfAdder(a=in[13], b=c12, sum=out[13], carry=c13);
 //    HalfAdder(a=in[14], b=c13, sum=out[14], carry=c14);
 //    HalfAdder(a=in[15], b=c14, sum=out[15], carry=c15);
-    Add16(a=in,b[0]=true,out=out);
-    
-    // Add16(a=in, b=in, out=out);
+
+        Add16(a=in,b[0]=true,b[1..15]=false,out=out);
+        //just b[0]=true also does the same, which means all are by default set to zero
 
 }
 
