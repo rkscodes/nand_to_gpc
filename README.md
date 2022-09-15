@@ -17,4 +17,4 @@ To run `.hdl` files :
 - `Simulate it and test`
 
 The whole process is shown below in video for easy understanding.
-![](./hdl-demo.mp4)
+[](./hdl-demo.mp4)
