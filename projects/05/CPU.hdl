@@ -1,7 +1,5 @@
-// This file is part of www.nand2tetris.org
-// and the book "The Elements of Computing Systems"
-// by Nisan and Schocken, MIT Press.
-// File name: projects/05/CPU.hdl
+
+
 
 /**
  * The Hack CPU (Central Processing unit), consisting of an ALU,
@@ -39,5 +37,5 @@ CHIP CPU {
         pc[15];          // address of next instruction
 
     PARTS:
-    // Put your code here:
+
 }

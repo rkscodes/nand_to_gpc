@@ -1,7 +1,5 @@
-// This file is part of www.nand2tetris.org
-// and the book "The Elements of Computing Systems"
-// by Nisan and Schocken, MIT Press.
-// File name: projects/01/Mux4Way16.hdl
+
+
 
 /**
  * 4-way 16-bit multiplexor:
@@ -16,7 +14,7 @@ CHIP Mux4Way16 {
     OUT out[16];
 
     PARTS:
-        // Put your code here:
+    
         //The higher bit should select which two lower mux to use 
         Mux16(a=a, b=b, sel=sel[0], out=t1);
         Mux16(a=c, b=d, sel=sel[0], out=t2);
