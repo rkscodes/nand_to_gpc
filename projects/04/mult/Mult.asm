@@ -7,4 +7,50 @@
 // This program only needs to handle arguments that satisfy
 // R0 >= 0, R1 >= 0, and R0*R1 < 32768.
 
-// Put your code here.
+// Put your code here. 
+
+// for(int i=1; i -n <=0; i++)
+// i-n > 0 
+
+
+// setting sum and loop var
+@sum 
+M = 0 
+@i 
+M = 1
+
+
+// for loop
+(LOOP)
+@i
+D = M
+@R1
+D = D - M
+@EXIT
+D; JGT
+
+@sum 
+D = M 
+@R0
+D = D + M
+
+@sum
+M = D
+
+@i
+M = M + 1
+
+@LOOP
+0; JMP
+
+(EXIT)
+@sum
+D = M
+
+@R2
+M = D 
+
+(END)
+@END
+0;JMP
+
